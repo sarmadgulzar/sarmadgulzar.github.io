@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: dist/isarmad/sarmad-ai
+        path: dist/sarmad-ai/*
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
