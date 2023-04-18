@@ -35,7 +35,6 @@ jobs:
     - name: Export Notion page to HTML
       env:
         NOTION_PAGE_URL: ${{ secrets.NOTION_PAGE_URL }}
-        OUTPUT_DIR: 'public'
       run: |
         cd loconotion
         python loconotion $NOTION_PAGE_URL --clean
@@ -44,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: public
+        path: dist/sarmad-ai
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
