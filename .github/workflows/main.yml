@@ -39,6 +39,9 @@ jobs:
         cd loconotion
         python loconotion $NOTION_PAGE_URL --clean
     
+    - name: List files in dist/sarmad-ai
+      run: ls dist/sarmad-ai
+    
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
