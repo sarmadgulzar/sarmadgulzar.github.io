@@ -31,6 +31,12 @@ jobs:
         OUTPUT_DIR: 'public'
       run: |
         loconotion export $NOTION_PAGE_URL $OUTPUT_DIR
+    
+    - name: Archive public directory
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-pages
+        path: public
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
