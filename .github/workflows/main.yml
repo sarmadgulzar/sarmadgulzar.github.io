@@ -19,17 +19,22 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: 3.9
-
-    - name: Install dependencies
+    
+    - name: Clone loconotion repository
       run: |
-        python -m pip install --upgrade pip
-        pip install git+https://github.com/leoncvlt/loconotion.git
+        git clone https://github.com/leoncvlt/loconotion.git
+
+    - name: Install loconotion dependencies
+      run: |
+        cd loconotion
+        pip install -r requirements.txt
 
     - name: Export Notion page to HTML
       env:
         NOTION_PAGE_URL: ${{ secrets.NOTION_PAGE_URL }}
         OUTPUT_DIR: 'public'
       run: |
+        cd loconotion
         python loconotion export $NOTION_PAGE_URL $OUTPUT_DIR
 
     - name: Deploy to GitHub Pages
