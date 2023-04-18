@@ -35,7 +35,7 @@ jobs:
         OUTPUT_DIR: 'public'
       run: |
         cd loconotion
-        python loconotion export $NOTION_PAGE_URL $OUTPUT_DIR
+        python loconotion $NOTION_PAGE_URL --clean
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
