@@ -46,7 +46,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: loconotion/dist/sarmad-ai/*
+        path: loconotion/dist/sarmad-ai
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
