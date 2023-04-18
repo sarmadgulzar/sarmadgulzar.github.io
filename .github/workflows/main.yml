@@ -40,13 +40,13 @@ jobs:
         python loconotion $NOTION_PAGE_URL --clean
     
     - name: List files in dist/sarmad-ai
-      run: ls dist/sarmad-ai
+      run: ls loconotion/dist/sarmad-ai
     
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: github-pages
-        path: dist/sarmad-ai/*
+        path: loconotion/dist/sarmad-ai/*
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
