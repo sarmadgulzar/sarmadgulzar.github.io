@@ -46,7 +46,7 @@ jobs:
       run: ls loconotion/dist/sarmad-ai
     
     - name: Upload artifact
-      uses: actions/actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v1
       with:
         name: github-pages
         path: loconotion/dist/sarmad-ai
