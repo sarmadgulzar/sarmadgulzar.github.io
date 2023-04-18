@@ -39,10 +39,15 @@ jobs:
       run: |
         cd loconotion
         python loconotion $NOTION_PAGE_URL --clean
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: github-pages
+        path: public
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        target_branch: gh-pages
-        build_dir: public
+        artifact_name: github-pages
