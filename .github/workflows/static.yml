@@ -41,7 +41,7 @@ jobs:
     
     - name: Create dist directory
       run: |
-        mkdir -p dist/isarmad/sarmad-gulzar
+        mkdir -p loconotion/dist/isarmad/sarmad-gulzar
 
     - name: Export Notion page to HTML
       env:
@@ -54,7 +54,7 @@ jobs:
       uses: actions/upload-pages-artifact@v1
       with:
         name: github-pages
-        path: dist/isarmad/sarmad-gulzar
+        path: loconotion/dist/isarmad/sarmad-gulzar
   
   deploy:
     needs: build
