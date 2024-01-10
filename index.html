@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sarmad Gulzar</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="173cdff5-22b3-43de-981c-3604cd8633a3" class="page sans"><header><h1 class="page-title">Sarmad Gulzar</h1><p class="page-description"></p></header><div class="page-body"><h1 id="2f0c32e5-5230-4648-961c-5b6885ef84f5" class="">My Story</h1><p id="a7fb9310-85d0-4c96-abab-32b63e1eebdf" class="">
+</p><h3 id="54094363-e74e-43af-83b3-607800704539" class=""><strong>Early Fascination with Mathematics and Electronics</strong></h3><p id="4046270e-89c3-4c9e-a75c-3501b36a3730" class="">From a very young age, I found myself deeply engrossed in the realms of mathematics, science, and electronics. My childhood memories are vivid with instances of studying entry-level algebra and geometry. What set me apart was my insatiable curiosity. I recall not just solving problems on paper, such as the Pythagorean theorem, but going a step further – drawing triangles on paper or even on the floor, measuring them to validate my solutions.</p><p id="281a9e9a-d05d-4584-b122-91a8d827bc29" class="">
+</p><h3 id="99cde85a-2eb5-418d-9ed3-e0937f29b84b" class=""><strong>High School Years: Fueling the Fire of Scientific Inquiry</strong></h3><p id="33642ffb-dc85-4db1-97f8-b4d6c1f4552b" class="">High school further ignited this passion. I was enthralled by our chemistry lab experiments, like creating soap by mixing various chemicals. This fascination wasn&#x27;t confined to academics. On my birthdays, I would receive RC cars, but within hours, I would disassemble them. Extracting the small motors, I experimented with them using batteries, even attempting to enhance their speed by connecting batteries in series or adding switch buttons for easier operation.</p><p id="0dfc6ed1-8d65-460f-b6f0-dd86575e510a" class="">
+</p><h3 id="33264bc7-3745-426f-af72-8af2f1c6c384" class=""><strong>A Rare Passion in Rural Pakistan</strong></h3><p id="c8f837fb-30c6-419e-aed7-34f3e78add81" class="">Growing up in the countryside of Pakistan, I realized my deep affinity for science and math was not just unique but also quite rare. The stark contrast between my interests and those of the 99% of kids around me was baffling. This realization became crystal clear years later when I read Paul Graham&#x27;s &quot;Hackers and Painters.&quot; It was this intrinsic curiosity to understand the mechanics behind things that I found to be unique and scarce in my environment.</p><p id="60dcc257-bd46-4260-ae78-381d219d2087" class="">
+</p><h3 id="cd2f1a62-815c-4904-970b-eed93c0002d5" class=""><strong>Embarking on Electrical Engineering and Programming</strong></h3><p id="856456de-619d-4e4d-8646-41824344cdd3" class="">Years passed, and unsurprisingly, I pursued a degree in Electrical Engineering. Here, I was introduced to the fascinating world of programming. My first foray was with C++. I learned about basic IO, control flow, loops, pointers, and data structures. I vividly remember our first programming class quiz, which involved writing a program to swap the values of two variables without using a third variable. The link to my solution is here: Sarmad Gulzar&#x27;s Program. I tested it rigorously, ensuring it worked in scenarios like both numbers being negative, one being zero, and so on. The joy I felt upon its success was immense. It was a prelude to my future interest in test-driven development, though at that time, I was just a beginner.</p><p id="e9d1867d-621a-48c7-bcd3-ff60596bf5cc" class="">
+</p><h3 id="39eec62e-2c96-468d-b20e-2b66285d900c" class=""><strong>Exploring Embedded Systems and Robotics</strong></h3><p id="fd75bc10-c43e-46de-b756-e3a275556918" class="">My journey didn&#x27;t stop at programming. In my second semester, I delved into embedded systems, amazed at how simple text changes in a file could control physical objects like LEDs and motors. This led me to explore Arduino and Raspberry Pi, deepening my knowledge in stepper motors, motor drivers, inertial measurement units (IMUs), and various sensors.</p><p id="6b659e7c-232c-4d33-8975-44e895515b94" class="">My final year project at the university was a pivotal moment. Along with my team, we developed a 6-DOF robotic arm. Unlike traditional robotic arms limited to pick-and-place tasks, ours had the freedom to move. We equipped it with a camera and used OpenCV for processing its vicinity. This capability allowed the arm to &quot;see&quot; and decide where to pick and place objects. This project was a deep dive into applied linear algebra, forward and inverse kinematics, CAD designing in Solidworks &amp; Creo, and 3D printing.</p><p id="105ce541-b7af-400f-8788-08804368e4ec" class="">
+</p><h3 id="fe17d7e9-dac9-44ae-82fe-932bf9bc5d92" class=""><strong>Post-University Challenges and Career Adaptation</strong></h3><p id="54eb04c2-336a-418c-88fd-07245c90c460" class="">After university, I faced challenges in finding a job in robotics or embedded systems in Pakistan. However, I was determined not to settle for any job, unlike many of my peers who moved into telecom-related roles. I decided to enhance my coding skills while keeping my passion for embedded systems alive. Self-teaching Django, Postgres, and cloud computing, I ventured into web development. Within six months, I progressed from freelance to long-term contract work, which not only sustained me financially but also enriched my skills in software architecture and engineering.</p><p id="de0507ce-6633-4120-bc82-56100d4023f4" class="">
+</p><h3 id="3ff6df2b-3848-4235-acab-45adc83ebc82" class=""><strong>Balancing Career and Passion</strong></h3><p id="96a46cac-3115-40ed-a939-9aee2ade9f40" class="">Even as I worked in web development, I never ceased learning about my true passions. Utilizing MOOCs like Coursera, Udacity, and edX, I expanded my knowledge in machine learning, deep learning, and computer vision. My projects ranged from simple linear regression models to building complex medium-scale CNNs. This dual approach to my career, one for sustenance and the other for passion, is akin to what Paul Graham describes in &quot;Hackers and Painters&quot;: having two jobs, one for income and the other for love. This philosophy has been my guiding principle for the past five years.</p><p id="a44e05a2-b039-4b24-8f40-04413d21c238" class="">
+</p><h1 id="d105df89-d8c8-4e87-ba72-0474a81a3efa" class="">Projects</h1><h3 id="875a50d4-3f66-4296-bc63-229c4456090a" class=""><strong>Notion YouTube Dynamic Template</strong></h3><p id="ea91ecc4-dec2-40a3-b52c-6669ec138dfb" class=""><strong>Objective:</strong> To minimize distractions and time spent on YouTube by curating content directly in a Notion workspace.</p><p id="f4bdd96b-87b1-4ad8-aad8-9d8d669da81e" class=""><strong>Features:</strong><div class="indented"><ul id="14c7de60-bbdb-47f0-8d79-ec75da13587b" class="bulleted-list"><li style="list-style-type:disc">Subscribes users to selected YouTube channels.</li></ul><ul id="22cd2535-1938-4880-898c-755f546019ef" class="bulleted-list"><li style="list-style-type:disc">Automatically updates the Notion database with new videos from these channels.</li></ul><ul id="9eb2d926-c206-4a6d-b694-b4faa9874cf1" class="bulleted-list"><li style="list-style-type:disc">Embeds YouTube videos within Notion for in-app viewing.</li></ul></div></p><p id="c577cc1e-e6c3-437a-ad59-df3bb2fd1fbe" class=""><strong>Technical Details:</strong><div class="indented"><ul id="7f0047ca-7a4b-4ecd-bb04-df68be2dc453" class="bulleted-list"><li style="list-style-type:disc"><strong>Backend Framework:</strong> Django, for robust and scalable app management.</li></ul><ul id="f8134239-b3c1-4283-abd8-686d6903f5f2" class="bulleted-list"><li style="list-style-type:disc"><strong>Database:</strong> Cloud Firestore, used for its real-time update features and scalability.</li></ul><ul id="3b76f0c3-f614-4686-bf29-a89bcf10510b" class="bulleted-list"><li style="list-style-type:disc"><strong>Integration:</strong> YouTube&#x27;s Pubsubhubbub feed triggers updates for new videos.</li></ul><ul id="0a0e4cfc-35c5-4d50-972c-1ab2bcf2b6c8" class="bulleted-list"><li style="list-style-type:disc"><strong>Scheduling:</strong> Google Cloud Scheduler renews Pubsubhubbub subscriptions every 10 days.</li></ul><ul id="ec922ddb-612e-4d41-9042-d680c8f967a7" class="bulleted-list"><li style="list-style-type:disc"><strong>OAuth2 Implementation:</strong> For secure Notion workspace connections.</li></ul><ul id="52b64be5-e70c-4f42-8b8f-c1039144b052" class="bulleted-list"><li style="list-style-type:disc"><strong>Hosting:</strong> Backend on Google Cloud Run and frontend on Firebase Hosting.</li></ul></div></p><p id="b6fb9501-157e-41fb-9bd1-2ee439ca7e94" class=""><strong>Project Link:</strong> <a href="https://notion-youtube-dynamic-template.example.com/">Notion YouTube Dynamic Template</a></p><p id="d6178367-e6ae-4e92-b7ae-3fb93268924b" class="">
+</p><h3 id="98de3e3f-a598-47ab-8271-8e6b414fceea" class=""><strong>Online Exam System</strong></h3><p id="f3b4111a-4e1e-4926-9f19-314b4f8f4e3f" class=""><strong>Objective:</strong> To leverage GPT for generating and evaluating exams in an online education system.</p><p id="9d25dcea-0001-450f-a2d7-46a992eddf52" class=""><strong>Features:</strong><div class="indented"><ul id="e937b9d4-4b9c-48ef-ba7e-bed417d6671f" class="bulleted-list"><li style="list-style-type:disc">Teachers create or fine-tune exams for different subjects.</li></ul><ul id="61ade64f-ea00-43a1-bc2d-969c4c7d0bf2" class="bulleted-list"><li style="list-style-type:disc">Students take exams via a unique link.</li></ul><ul id="8524180c-72ee-42ec-8ade-2f2c1c637a01" class="bulleted-list"><li style="list-style-type:disc">Automated evaluation of answers using GPT.</li></ul></div></p><p id="1b113b5a-bb06-4f4f-9428-301de56ab95c" class=""><strong>Technical Details:</strong><div class="indented"><ul id="9e14736e-63d5-42bb-a4fb-d76d52cf46e6" class="bulleted-list"><li style="list-style-type:disc"><strong>Backend Framework:</strong> Django, ensuring a strong and secure back-end.</li></ul><ul id="bb7d7d0c-7769-4e2c-8ebf-ad54587d18d0" class="bulleted-list"><li style="list-style-type:disc"><strong>APIs:</strong> Built using Django REST Framework.</li></ul><ul id="607be58d-818b-4967-b3e1-e8aa409c308e" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> JWT for secure user sessions.</li></ul><ul id="efd7cb14-fc88-4a46-a738-540bb97b0c68" class="bulleted-list"><li style="list-style-type:disc"><strong>Database:</strong> Postgres hosted on Supabase.</li></ul><ul id="0840f9df-9f1c-49d5-bad4-5adf72208805" class="bulleted-list"><li style="list-style-type:disc"><strong>AI Integration:</strong> OpenAI GPT-4 API for generating and evaluating exams.</li></ul><ul id="d0cc3ea5-ab22-4844-97ed-db7a0cf38d93" class="bulleted-list"><li style="list-style-type:disc"><strong>Hosting:</strong> Backend on Google Cloud Run and frontend on Firebase Hosting.</li></ul></div></p><p id="f0df8740-e552-4dd9-b6d1-e50932fe4ca7" class=""><strong>Project Link:</strong> <a href="https://online-exam-system.example.com/">Online Exam System</a></p><p id="e40662ab-066e-4ce6-b98e-713f191d4e8e" class="">
+</p><h3 id="5ca740e0-0319-43a0-9d35-62bc876a704b" class="">Implementing<strong> Neural Networks from Scratch in Python and Rust:</strong></h3><p id="49a52767-6b0d-4000-95b7-649bd8867d6c" class=""><strong>Objective:</strong> To gain an in-depth understanding of neural networks from the ground up.</p><p id="3fca48ad-cb00-46a8-ada7-855df3cd2961" class=""><strong>Methodology:</strong> Utilizing the book &quot;Neural Networks From Scratch&quot; (<a href="http://nnfs.io/">nnfs.io</a>) as a primary resource.</p><p id="744d7a38-5523-41c8-b66d-b2e82233b8e3" class=""><strong>Implementation:</strong> Performing exercises and coding examples in both Python and Rust, focusing on understanding the underlying mechanics of neural networks.</p><p id="4e185ed0-eced-47f5-add8-008e01a7a1d7" class=""><strong>Focus:</strong> Building neural networks using only numpy in Python, and equivalent libraries in Rust, to develop a strong foundational understanding without relying on higher-level frameworks like PyTorch or TensorFlow.</p><p id="d9d398f3-25f3-4d8a-96b4-7959e4291a9b" class=""><strong>Link to Resource:</strong> <a href="https://nnfs.io/">Neural Networks From Scratch</a></p><p id="b4998d75-232e-439d-95c2-0673a210ca18" class="">
+</p><h3 id="404bb2b3-a174-4bb8-80bb-31528a3ebf6a" class=""><strong>matops: A Python-based Matrix Manipulation Library:</strong></h3><p id="10ac7245-0dea-4bbb-8454-475a427151e8" class=""><strong>Objective:</strong> To create a lightweight matrix manipulation library in Python.</p><p id="6072da51-89af-4ed9-9567-58cd3597d48a" class=""><strong>Features:</strong><div class="indented"><ul id="66b5ad6c-c2d1-4b21-be74-30f25f1fedbb" class="bulleted-list"><li style="list-style-type:disc">Optimized for smaller file size, making it suitable for devices with limited resources.</li></ul><ul id="754e6328-2331-4ba8-8143-f59911683f48" class="bulleted-list"><li style="list-style-type:disc">Ideal for applications on microcontrollers like Raspberry Pi Pico running MicroPython.</li></ul><ul id="cedad58e-62ea-4339-a918-e212ef027ea9" class="bulleted-list"><li style="list-style-type:disc">Provides basic functionalities of matrix operations without the overhead of larger libraries like numpy.</li></ul></div></p><p id="50c2aa90-b308-4ccc-8e8b-3c8d7a1e4e09" class=""><strong>Applications:</strong> Useful in educational settings, small-scale robotics, or IoT projects where resource efficiency is critical.</p><p id="b52d29b0-4212-4f56-a339-6fb064ead61d" class=""><strong>Link to Project:</strong> <a href="https://metops-library.example.com/">metops Library</a></p><p id="426fbced-d5fd-42e0-b503-60b5e6e8c308" class="">
+</p><h3 id="37216801-720e-4cbc-ab82-bab82fcdcd77" class="">Some other SaaS and AI<strong> Projects:</strong></h3><ol type="1" id="72b9af02-49da-4ed7-aa8a-5316545afcd9" class="numbered-list" start="1"><li><strong>YT Hooks</strong><p id="82978ca0-d151-40ac-a0b2-537dcb94d101" class=""><strong>Description: </strong>YT Hooks is a service offering an innovative solution for receiving updates from YouTube channels. It allows users to create watchlists of their favorite channels and automatically sends notifications via webhooks when new content is uploaded. This tool is particularly useful for those who need to stay updated with specific channels without the need to constantly check YouTube. The system ensures secure and encrypted communication for notifications, making it a reliable tool for content managers and YouTube enthusiasts who require timely updates.</p><p id="23b99b6a-edc2-4402-a815-2938275fae7c" class=""><strong>Link: </strong><a href="https://infinitylab.ai/summarize">https://infinitylab.ai/summarize</a></p></li></ol><ol type="1" id="9aa3339b-3eea-4deb-ab9f-90c86185fd4b" class="numbered-list" start="2"><li><strong>QuickSummary</strong><p id="fa3ebff9-573a-42d6-be28-ede3a0a20dc9" class=""><strong>Description: </strong>QuickSummary is a browser extension that revolutionizes the way we interact with YouTube videos. By using advanced Large Language Models (LLMs), it provides concise, intelligent summaries of video content, helping users quickly grasp the essence of a video. Alongside summarization, it also generates custom timestamps, allowing users to navigate directly to the most relevant parts of a video. This extension is particularly valuable for people who need to process large amounts of video content efficiently, like students, researchers, or professionals seeking to optimize their time online.</p><p id="74a78831-3087-4476-9c72-b9a90f46def2" class=""><strong>Link: </strong><a href="https://infinitylab.ai/polls">https://infinitylab.ai/polls</a></p></li></ol><ol type="1" id="700d9704-c5b9-4665-9e2a-639a05e2e9d0" class="numbered-list" start="3"><li><strong>QuickPoll</strong><p id="8e3219fb-6262-408c-ba10-528a557afd6a" class=""><strong>Description: </strong>QuickPoll transforms the way audience engagement is facilitated during presentations and events. It is a live polling app that integrates seamlessly into interactive sessions, enabling real-time voting on various topics or questions. Participants join the poll through a simple QR code scan, making it extremely accessible. As votes are cast, they are displayed live, adding a dynamic and engaging layer to presentations. This application is perfect for enhancing audience interaction in diverse settings, such as conferences, educational environments, or workshops, providing a modern twist to traditional Q&amp;A sessions.</p><p id="1d748390-12a3-43ab-9498-32016949d472" class=""><strong>Link: </strong><a href="https://www.infinitylab.ai/watchlist">https://www.infinitylab.ai/watchlist</a></p></li></ol><p id="eca3debe-e26a-4752-9452-0257e28c835a" class="">
+</p><h2 id="756239ad-5a51-4a49-970e-c4f59b78f884" class=""><strong>Hackathons:</strong></h2><h3 id="6d87867c-d6bf-4245-90bc-35030b78e15b" class=""><strong>The Digi-Coded Challenge (CodersHQ, Dubai):</strong></h3><p id="8926ee4a-db04-45b1-8123-624f3e184a4c" class=""><strong>Project:</strong> Developed a lesson planner using GPT in 48 hours.</p><p id="dbf65e2c-2ffd-49aa-9055-0b51e9291da7" class=""><strong>Award:</strong> First prize, including a certificate from UAE&#x27;s Minister of AI and an M2 MacBook Pro.</p><p id="18e17d9a-a991-4334-9d4a-dd85f336e164" class=""><strong>Link:</strong> <a href="https://digicoded-challenge.example.com/">Digi-Coded Challenge</a></p><h3 id="11bd7304-d399-4a8f-9ddc-5d58b09fff75" class=""><strong>DevSlam (GITEX, 2023):</strong></h3><p id="35d445ec-d8bc-4382-b609-5fc3b5222a28" class=""><strong>Project:</strong> Conceptualized an app for monitoring and incentivizing reduced carbon footprints.</p><p id="f369bc0a-579b-4e4a-853a-d9aee9b681a7" class=""><strong>Link:</strong> <a href="https://devslam-2023.example.com/">DevSlam Hackathon</a></p><p id="0f8ff15f-ccd7-49a3-923c-fb9991599196" class="">
+</p><p id="51d650e3-6163-45e6-98a7-3fceb14d45b8" class="">These activities reflect a strong commitment to continuous learning and skill enhancement in various domains of technology, particularly in programming, machine learning, and electronics. The focus on both theoretical understanding and practical application underlines a holistic approach to technological innovation and expertise.</p><p id="48e1f3d6-fe5d-4ba0-9a0b-e16bddb3ba6f" class="">
+</p><h1 id="ff77bc87-4288-4845-a6f1-637d8b4fc343" class=""><strong>Experiences</strong></h1><h3 id="a46d24c4-e985-4c66-9e17-2b0d4bffa1c5" class=""><strong>Software Developer, Asomas Tech Limited (Jun 2020 - Present)</strong></h3><p id="218ae082-e038-43ff-897a-2e57d057c955" class="">In my professional role at this AI-centric startup, I was responsible for:</p><ul id="6c18f727-9465-4bee-9d9b-11db6f3da51a" class="bulleted-list"><li style="list-style-type:disc">Maintaining and improving large codebases, using test-driven development for optimal performance.</li></ul><ul id="3ff42cc0-7642-4b16-9618-c84b55eca4ae" class="bulleted-list"><li style="list-style-type:disc">Working collaboratively on AI-powered recruitment solutions, leveraging my software development skills to enhance product offerings.</li></ul><ul id="362aeaa8-8435-4854-9322-7cfed84f7e1f" class="bulleted-list"><li style="list-style-type:disc">Utilizing my cloud computing knowledge to deploy, manage, and maintain various services.</li></ul><p id="6c0fa900-a6e6-487d-ad60-9d302d09d4bf" class="">
+</p><h1 id="6bf6b804-1b7f-4980-a43b-a3fcaca0e140" class=""><strong>Education</strong></h1><h3 id="b811fc9d-e8d2-4cbb-9716-00a18648fe6d" class=""><strong>Bachelor&#x27;s in Electrical Engineering, UET Taxila (Oct 2014 - Sep 2018)</strong></h3><p id="2324549f-26ab-48aa-b621-14fb8c2f5075" class="">This degree provided me with:</p><ul id="10f578c3-499a-4cf3-b3c7-99b55707ab4a" class="bulleted-list"><li style="list-style-type:disc">A strong foundation in key principles of electrical engineering.</li></ul><ul id="d6699a7c-e16f-4c2d-ae2e-e40615eaa9e6" class="bulleted-list"><li style="list-style-type:disc">The opportunity to apply programming languages such as C++, MATLAB, and Verilog in various academic projects.</li></ul><ul id="a623778a-38b7-42ce-9f36-396770bc7b19" class="bulleted-list"><li style="list-style-type:disc">An avenue to explore and cultivate an interest in robotics, leading to my final-year project.</li></ul><h1 id="88e889e0-bcfc-405b-b9ae-f20b6f35ece3" class=""><strong>Contact</strong></h1><p id="ae922ebb-e42f-4ce2-aa21-909269e3a366" class="">I always appreciate a good conversation, whether it&#x27;s about potential projects, sharing knowledge, or discussing the latest advancements in technology. Feel free to reach out:</p><p id="9260ebf3-0ce3-4a8e-a508-824072c0d9d1" class="">Email: <a href="mailto:sarmadgulzar@icloud.com">sarmadgulzar@icloud.com</a><br/>X: <br/><a href="https://x.com/ixarmad/">x.com/ixarmad/</a><br/>LinkedIn: <br/><a href="https://www.linkedin.com/in/sarmadgulzar/">linkedin.com/in/sarmadgulzar/</a><br/>GitHub: <br/><a href="https://github.com/sarmadgulzar/">github.com/sarmadgulzar/</a></p><h1 id="426f94da-40ac-45f7-8396-7718cd0b3b71" class=""><strong>Resume</strong></h1><p id="f8b99a45-8257-49c0-b591-8d7a52b29419" class="">For a more comprehensive overview of my academic and professional journey, as well as a detailed list of my skills, please <a href="https://sarmad.ai/resume.pdf"><strong>download my resume</strong></a>. If you&#x27;re interested in any particular aspect of my work or if there&#x27;s an opportunity you believe I&#x27;d be a good fit for, don&#x27;t hesitate to reach out to me. I look forward to hearing from you!</p><p id="b213d345-916f-4dfb-8b92-6a1fb99e0526" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
